@@ -1,35 +1,28 @@
 import Head from 'next/head'
+import React from 'react'
 import styles from '../styles/Home.module.css'
+import Footer from '@/components/footer/footer'
+import SearchBar from "@/components/searchbar/searchbar";
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    return (
+        <div className={styles.container}>
+            <Head>
+                <title>Gif Seeker</title>
+                <link rel="icon" href="/favicon.ico"/>
+            </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+            <main className={styles.main}>
+                <h1 className={styles.title}>
+                    What <span>Gif</span> are you looking for?
+                </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-      </main>
+                <SearchBar />
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+
+            </main>
+
+            <Footer />
+        </div>
+    )
 }
